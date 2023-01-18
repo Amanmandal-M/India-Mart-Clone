@@ -1,9 +1,12 @@
 const express = require('express');
-const {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle} = require('../Controllers/BrickController')
+const {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle,GetBrickById} = require('../Controllers/BrickController')
 const BrickRouter = express.Router();
 
 // Get
 BrickRouter.get('/BricksData',GetBrick)
+
+//Get By Id
+BrickRouter.get('/Bricks/:id',GetBrickById)
 
 // Post
 BrickRouter.post("/BricksPost",PostBrick)
