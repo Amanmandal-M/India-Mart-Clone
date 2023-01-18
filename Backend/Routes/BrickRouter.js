@@ -1,5 +1,5 @@
 const express = require('express');
-const {GetBrick,PostBrick,UpdateBrick,DeleteBrick} = require('../Controllers/BrickController')
+const {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit} = require('../Controllers/BrickController')
 const BrickRouter = express.Router();
 
 // Get
@@ -14,5 +14,8 @@ BrickRouter.patch("/update/:id",UpdateBrick)
 // Delete
 BrickRouter.delete("/delete/:id",DeleteBrick)
 
+//Pagination
+
+BrickRouter.get('/limit',GetLimit)
 
 module.exports = {BrickRouter}
