@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.listen(process.env.PORT, async ()=>{
     try {
-        await connection
+        connection
         console.log(`Connected to Database`);
         console.log(`PORT is running at ${process.env.PORT}`);
     } catch (error) {
