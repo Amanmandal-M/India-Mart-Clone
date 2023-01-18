@@ -15,6 +15,7 @@ const GetBrick = async (req,res)=>{
 }
 
 
+
 const PostBrick = async (req, res) => {
     try {
         const brick = new BrickModel(req.body);
@@ -29,6 +30,8 @@ const PostBrick = async (req, res) => {
         })
     }
 }
+
+
 
 const UpdateBrick = async (req, res) => {
     const ID = req.params.id;
@@ -47,6 +50,7 @@ const UpdateBrick = async (req, res) => {
 }
 
 
+
 const DeleteBrick = async (req, res) => {
     const ID = req.params.id;
     try {
@@ -62,15 +66,42 @@ const DeleteBrick = async (req, res) => {
     }
 }
 
+
+
 const GetLimit = async (req, res) => {
     const query = req.query.q
     try {
         const data = await BrickModel.find().limit(query)
-        res.send(data);
+        if(data.length > 0) {
+            res.send(data);
+        }else{
+            res.send({
+                "Message": "Limit is not available"
+            })
+        }
     } catch (error) {
         console.log(`Error in LimitBrick : ${error}`);
         res.send({
             "Message": "Error in LimitBrick : ${error}",
+        })
+    }
+}
+
+const GetbyTitle = async (req, res) => {
+    const query = req.query.q
+    try {
+        const data = await BrickModel.find({Title: {$regex:`(?i)${query}`}})
+        if(data.length>0){
+            res.send(data);
+        }else{
+            res.send({
+                "Message":"Data not found"
+            })
+        }
+    } catch (error) {
+        console.log(`Error in TitleBrick : ${error}`);
+        res.send({
+            "Message": "Error in TitleBrick : ${error}",
         })
     }
 }
