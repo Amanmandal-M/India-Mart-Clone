@@ -18,7 +18,6 @@ BrickRouter.delete("/delete/:id",DeleteExcavator)
 BrickRouter.get('/limit',GetLimit)
 
 //Title
-
 BrickRouter.get("/title",GetbyTitle)
 
 module.exports = {ExcavatorRouter}
