@@ -7,7 +7,12 @@ require('dotenv').config();
 // New User When Register
 
 const registerUser = async (req, res) => {
-    const { Username, EmailId, Password, DateOfBirth, Role, Location } = req.body;
+    const { Username, EmailId, Password, DateOfBirth, ContactNumber, Location } = req.body;
+    if(EmailId){
+      const datas = await UserModel.find({ EmailId: EmailId });
+      
+    }
+
     try {
       bcrypt.hash(Password, 5, async (err, secure_password) => {
         if (err) {
@@ -21,7 +26,7 @@ const registerUser = async (req, res) => {
               EmailId,
               Password: secure_password,
               DateOfBirth,
-              Role,
+              ContactNumber,
               Location,
             });
           await user.save();
@@ -48,7 +53,7 @@ const loginUser = async (req, res) => {
       if (userData.length > 0) {
         bcrypt.compare(Password, userData[0].Password, (err, result) => {
           if (result) {
-            const token = jwt.sign({ UserID: userData[0]._id }, process.env.key ,{expiresIn:"24h"});
+            const token = jwt.sign({ UserID: userData[0]._id }, process.env.key ,{expiresIn:"4h"});
             res.send({
               "Message": "Login successful",
               "Token": token,
