@@ -1,23 +1,23 @@
 const express = require('express');
-const {GetExcavator,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle} = require('../Controllers/BrickController')
+const {GetExcavator,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle} = require('../Controllers/ExcavatorController')
 const ExcavatorRouter = express.Router();
 
 // Get
-BrickRouter.get('/ExcavatorData',GetExcavator)
+ExcavatorRouter.get('/ExcavatorData',GetExcavator)
 
 // Post
-BrickRouter.post("/ExcavatorPost",PostExcavator)
+ExcavatorRouter.post("/ExcavatorPost",PostExcavator)
 
 // Update
-BrickRouter.patch("/update/:id",UpdateExcavator)
+ExcavatorRouter.patch("/update/:id",UpdateExcavator)
 
 // Delete
-BrickRouter.delete("/delete/:id",DeleteExcavator)
+ExcavatorRouter.delete("/delete/:id",DeleteExcavator)
 
 //Pagination
-BrickRouter.get('/limit',GetLimit)
+ExcavatorRouter.get('/limit',GetLimit)
 
 //Title
-BrickRouter.get("/title",GetbyTitle)
+ExcavatorRouter.get("/title",GetbyTitle)
 
 module.exports = {ExcavatorRouter}
