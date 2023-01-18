@@ -17,6 +17,7 @@ const GetBrick = async (req,res)=>{
 
 const GetBrickById = async (req, res) => {
     const ID = req.params.id
+    console.log(ID);
     try {
         if(ID){
             const data = await BrickModel.find({_id: ID});

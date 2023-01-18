@@ -6,7 +6,7 @@ const ExcavatorRouter = express.Router();
 ExcavatorRouter.get('/ExcavatorData',GetExcavator)
 
 //Get By Id
-BrickRouter.get('/Bricks/:id',GetExcavatorById)
+ExcavatorRouter.get('/Excavator/:id',GetExcavatorById)
 
 // Post
 ExcavatorRouter.post("/ExcavatorPost",PostExcavator)
