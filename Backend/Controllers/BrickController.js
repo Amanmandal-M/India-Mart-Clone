@@ -14,6 +14,7 @@ const GetBrick = async (req,res)=>{
     }
 }
 
+
 const GetBrickById = async (req, res) => {
     const ID = req.params.id
     try {
@@ -49,7 +50,6 @@ const PostBrick = async (req, res) => {
 }
 
 
-
 const UpdateBrick = async (req, res) => {
     const ID = req.params.id;
     const payload = req.body;
@@ -67,7 +67,6 @@ const UpdateBrick = async (req, res) => {
 }
 
 
-
 const DeleteBrick = async (req, res) => {
     const ID = req.params.id;
     try {
@@ -82,7 +81,6 @@ const DeleteBrick = async (req, res) => {
         })
     }
 }
-
 
 
 const GetLimit = async (req, res) => {
@@ -103,6 +101,7 @@ const GetLimit = async (req, res) => {
         })
     }
 }
+
 
 const GetbyTitle = async (req, res) => {
     const query = req.query.q
