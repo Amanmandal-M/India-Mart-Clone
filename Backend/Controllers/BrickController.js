@@ -106,4 +106,4 @@ const GetbyTitle = async (req, res) => {
     }
 }
 
-module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit}
+module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle}
