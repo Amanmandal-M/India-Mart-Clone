@@ -2,7 +2,6 @@ const { BrickModel } = require("../Models/BrickModel");
 
 
 
-
 const GetBrick = async (req,res)=>{
     try {
         const data = await BrickModel.find();
