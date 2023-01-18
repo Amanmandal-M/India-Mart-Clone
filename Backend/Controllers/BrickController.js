@@ -62,5 +62,17 @@ const DeleteBrick = async (req, res) => {
     }
 }
 
+const GetLimit = async (req, res) => {
+    const query = req.query.q
+    try {
+        const data = await BrickModel.find().limit(query)
+        res.send(data);
+    } catch (error) {
+        console.log(`Error in LimitBrick : ${error}`);
+        res.send({
+            "Message": "Error in LimitBrick : ${error}",
+        })
+    }
+}
 
 module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit}
