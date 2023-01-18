@@ -1,18 +1,18 @@
 const express = require('express');
-const {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle} = require('../Controllers/BrickController')
-const BrickRouter = express.Router();
+const {GetExcavator,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle} = require('../Controllers/BrickController')
+const ExcavatorRouter = express.Router();
 
 // Get
-BrickRouter.get('/BricksData',GetBrick)
+BrickRouter.get('/ExcavatorData',GetExcavator)
 
 // Post
-BrickRouter.post("/BricksPost",PostBrick)
+BrickRouter.post("/ExcavatorPost",PostExcavator)
 
 // Update
-BrickRouter.patch("/update/:id",UpdateBrick)
+BrickRouter.patch("/update/:id",UpdateExcavator)
 
 // Delete
-BrickRouter.delete("/delete/:id",DeleteBrick)
+BrickRouter.delete("/delete/:id",DeleteExcavator)
 
 //Pagination
 BrickRouter.get('/limit',GetLimit)
@@ -21,4 +21,4 @@ BrickRouter.get('/limit',GetLimit)
 
 BrickRouter.get("/title",GetbyTitle)
 
-module.exports = {BrickRouter}
+module.exports = {ExcavatorRouter}
