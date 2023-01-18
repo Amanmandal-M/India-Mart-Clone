@@ -13,6 +13,9 @@ const { UserRouter } = require('./Routes/UserRouter');
 // Calling Routers & converting data to json 
 
 app.use(express.json());
+app.get('/',(req,res)=>{
+    res.send("Welcome in My Project Api")
+})
 app.use("/products" ,BrickRouter)
 app.use("/products" ,ExcavatorRouter)
 app.use("/users",UserRouter)
