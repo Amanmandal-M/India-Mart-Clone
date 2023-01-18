@@ -69,7 +69,7 @@ const DeleteBrick = async (req, res) => {
 
 
 const GetLimit = async (req, res) => {
-    const query = req.query.q
+    const query = req.query.limit
     try {
         const data = await BrickModel.find().limit(query)
         if(data.length > 0) {
