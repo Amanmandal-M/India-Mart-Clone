@@ -9,15 +9,15 @@ ExcavatorRouter.get('/ExcavatorData',GetExcavator)
 ExcavatorRouter.post("/ExcavatorPost",PostExcavator)
 
 // Update
-ExcavatorRouter.patch("/update/:id",UpdateExcavator)
+ExcavatorRouter.patch("/Exupdate/:id",UpdateExcavator)
 
 // Delete
-ExcavatorRouter.delete("/delete/:id",DeleteExcavator)
+ExcavatorRouter.delete("/Exdelete/:id",DeleteExcavator)
 
 //Pagination
-ExcavatorRouter.get('/limit',GetLimit)
+ExcavatorRouter.get('/Exlimit',GetLimit)
 
 //Title
-ExcavatorRouter.get("/title",GetbyTitle)
+ExcavatorRouter.get("/Extitle",GetbyTitle)
 
 module.exports = {ExcavatorRouter}

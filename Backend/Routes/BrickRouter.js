@@ -9,16 +9,16 @@ BrickRouter.get('/BricksData',GetBrick)
 BrickRouter.post("/BricksPost",PostBrick)
 
 // Update
-BrickRouter.patch("/update/:id",UpdateBrick)
+BrickRouter.patch("/Brupdate/:id",UpdateBrick)
 
 // Delete
-BrickRouter.delete("/delete/:id",DeleteBrick)
+BrickRouter.delete("/Brdelete/:id",DeleteBrick)
 
 //Pagination
-BrickRouter.get('/limit',GetLimit)
+BrickRouter.get('/Brlimit',GetLimit)
 
 //Title
 
-BrickRouter.get("/title",GetbyTitle)
+BrickRouter.get("/Brtitle",GetbyTitle)
 
 module.exports = {BrickRouter}
