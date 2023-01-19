@@ -82,7 +82,7 @@ const DeleteExcavator = async (req, res) => {
     }
 }
 
-
+// Pagination
 const GetLimit = async (req, res) => {
     const query = req.query.limit
     try {
