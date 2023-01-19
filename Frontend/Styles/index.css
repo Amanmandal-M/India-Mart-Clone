@@ -94,9 +94,21 @@
 
 .inputs{
     position: absolute;
-    border: 1px solid rgb(192, 169, 19);
     width: 78%;
     height: 100%;
-    top: 12px;
+    top: -2px;
     left: 160px;
+}
+
+.inputs>input{
+    width: 70%;
+    height: 97%;
+    font-size: 22px;
+}
+
+.inputs>button{
+    position: absolute;
+    left: 409px;
+    width: 31%;
+    height: 106%;
 }
