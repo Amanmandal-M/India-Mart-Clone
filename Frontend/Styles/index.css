@@ -6,8 +6,10 @@
     width: 100%;
     height: 66px;
     background-color: blue;
-    display: flex
+    display: flex;
+    justify-content: space-between;
 }
+
 .first{
     border: 1px solid black;
     width: 20%;
@@ -26,4 +28,8 @@
 }
 
 
-.s
+.second{
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+}
