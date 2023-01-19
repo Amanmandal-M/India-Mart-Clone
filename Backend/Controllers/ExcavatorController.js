@@ -36,8 +36,8 @@ const GetExcavatorById = async (req, res) => {
 // Post Data
 const PostExcavator = async (req, res) => {
     try {
-        const Excavator = ExcavatorModel.insertMany(req.body);
-        // await Excavator.save();
+        const Excavator = new ExcavatorModel(req.body);
+        await Excavator.save();
         res.send({
             "Message":"Product Added Successfully"
         });
