@@ -1,7 +1,7 @@
 const { ExcavatorModel } = require("../Models/ExcavatorModel");
 
 
-
+// Get All Data
 const GetExcavator = async (req,res)=>{
     try {
         const data = await ExcavatorModel.find();
@@ -14,7 +14,7 @@ const GetExcavator = async (req,res)=>{
     }
 }
 
-
+// Get Data by Id
 const GetExcavatorById = async (req, res) => {
     const ID = req.params.id
     try {
@@ -33,7 +33,7 @@ const GetExcavatorById = async (req, res) => {
     }
 }
 
-
+// Post Data
 const PostExcavator = async (req, res) => {
     try {
         const Excavator = ExcavatorModel.insertMany(req.body);
@@ -49,7 +49,7 @@ const PostExcavator = async (req, res) => {
     }
 }
 
-
+// Update Data by Id
 const UpdateExcavator = async (req, res) => {
     const ID = req.params.id;
     const payload = req.body;
@@ -66,7 +66,7 @@ const UpdateExcavator = async (req, res) => {
     }
 }
 
-
+// Delete Data by Id
 const DeleteExcavator = async (req, res) => {
     const ID = req.params.id;
     try {
@@ -102,7 +102,7 @@ const GetLimit = async (req, res) => {
     }
 }
 
-
+// Get by Title 
 const GetbyTitle = async (req, res) => {
     const query = req.query.q
     try {
@@ -122,4 +122,29 @@ const GetbyTitle = async (req, res) => {
     }
 }
 
-module.exports = {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle}
+// Sorting asc to desc
+const GetbySortAscToDsc = async (req, res) => {
+    try {
+        const data = await ExcavatorModel.find().sort({Price:1})
+        res.send(data);
+    } catch (error) {
+        console.log(`Error in GetbySortAscToDsc : ${error}`);
+        res.send({
+            "Message": "Error in GetbySortAscToDsc : ${error}",
+        })
+    }
+}
+
+// Sorting desc to asc
+const GetbySortDscToAsc = async (req, res) => {
+    try {
+        const data = await ExcavatorModel.find().sort({Price:-1})
+        res.send(data);
+    } catch (error) {
+        console.log(`Error in GetbySortDscToAsc : ${error}`);
+        res.send({
+            "Message": "Error in GetbySortDscToAsc : ${error}",
+        })
+    }
+}
+module.exports = {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,GetbySortDscToAsc}
