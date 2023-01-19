@@ -40,7 +40,7 @@
 
 .second>div{
     padding-left: 5px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     height: 94%;
     padding-top: 5px;
 }
@@ -48,4 +48,10 @@
     border-bottom: 3px solid rgb(14, 205, 11);
     cursor: pointer;
 }
+
+.second>div:nth-child(5):hover{
+        display:list-item;
+        display: list-item;
+}
+
 
