@@ -1,7 +1,7 @@
 const { BrickModel } = require("../Models/BrickModel");
 
 
-
+// Get All Data
 const GetBrick = async (req,res)=>{
     try {
         const data = await BrickModel.find();
@@ -14,7 +14,7 @@ const GetBrick = async (req,res)=>{
     }
 }
 
-
+// Get Data by Id
 const GetBrickById = async (req, res) => {
     const ID = req.params.id
     console.log(ID);
@@ -34,7 +34,7 @@ const GetBrickById = async (req, res) => {
     }
 }
 
-
+// Post Data
 const PostBrick = async (req, res) => {
     try {
         const brick = new BrickModel(req.body);
@@ -50,7 +50,7 @@ const PostBrick = async (req, res) => {
     }
 }
 
-
+// Update Data by Id
 const UpdateBrick = async (req, res) => {
     const ID = req.params.id;
     const payload = req.body;
@@ -67,7 +67,7 @@ const UpdateBrick = async (req, res) => {
     }
 }
 
-
+// Delete Data by Id
 const DeleteBrick = async (req, res) => {
     const ID = req.params.id;
     try {
@@ -83,7 +83,7 @@ const DeleteBrick = async (req, res) => {
     }
 }
 
-
+// Pagination
 const GetLimit = async (req, res) => {
     const query = req.query.limit
     try {
@@ -103,7 +103,7 @@ const GetLimit = async (req, res) => {
     }
 }
 
-
+// Get by Title 
 const GetbyTitle = async (req, res) => {
     const query = req.query.q
     try {
@@ -123,4 +123,30 @@ const GetbyTitle = async (req, res) => {
     }
 }
 
-module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle,GetBrickById}
+// Sorting asc to desc
+const GetbySortAscToDsc = async (req, res) => {
+    try {
+        const data = await BrickModel.find().sort({Price:1})
+        res.send(data);
+    } catch (error) {
+        console.log(`Error in GetbySortAscToDsc : ${error}`);
+        res.send({
+            "Message": "Error in GetbySortAscToDsc : ${error}",
+        })
+    }
+}
+
+// Sorting desc to asc
+const GetbySortDscToAsc = async (req, res) => {
+    try {
+        const data = await BrickModel.find().sort({Price:-1})
+        res.send(data);
+    } catch (error) {
+        console.log(`Error in GetbySortDscToAsc : ${error}`);
+        res.send({
+            "Message": "Error in GetbySortDscToAsc : ${error}",
+        })
+    }
+}
+
+module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle,GetBrickById,GetbySortAscToDsc,GetbySortDscToAsc}
