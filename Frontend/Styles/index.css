@@ -65,7 +65,7 @@
     left: 300px;
     font-size: 29px;
     font-weight: bolder;
-    color: rgb(10, 0, 0);
+    color: rgb(16 0 186);
     text-align: center;
 }
 #value{
@@ -74,22 +74,22 @@
     top: 198px;
     left: 292px;
     background: #ececec;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .name{
     display: flex;
-    border: 1px solid white;
     width: 20%;
     height: 38px;
     align-items: center;
     padding: 5px;
-    font-size: 25px;
-    font-weight: bold;
     color: rgb(35, 34, 34);
 }
 
 .name>p{
     margin-left: 15px;
+    font-size: 19px;
 }
 
 .inputs{
@@ -103,15 +103,36 @@
 .inputs>input{
     position: absolute;
     top: 3px;
-    width: 72%;
+    width: 70%;
     height: 97%;
-    font-size: 22px;
+    font-size: 19px;
     border: none;
+    padding: 0px 14px;
 }
 
 .inputs>button{
+   background-color: #02625a;
     position: absolute;
     left: 409px;
     width: 31%;
-    height: 106%;
+    top: 2px;
+    height: 99%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    color: white;
+    font-weight: 700;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.inputs>button>img{
+    width: 40px;
+    height: 40px;
+}
+.inputs>button:hover{
+    cursor: pointer;
+    width: 40%;
 }
