@@ -3,7 +3,7 @@ const AdminRouter = express.Router();
 const {UpdateBrick,DeleteBrick,UpdateExcavator,DeleteExcavator,UserData} = require('../Controllers/AdminControl')
 
 // Get Data Of Users
-AdminRouter.patch("/UsersData",UserData)
+AdminRouter.get("/UsersData",UserData)
 
 
 // Update
