@@ -211,3 +211,98 @@ margin-top: 5px;
 #contentSliding>div>div{
     padding: 15px;
 }
+
+#prod{
+    margin: auto;
+    margin-top: 20px;
+    width: 97%;
+    height: auto;
+    border-top: 3px solid #2e3192;
+    /* box style */
+}
+
+#prod>a>h1 , #prods>a>h1{
+    margin-top: 20px;
+}
+
+#prod>a , #prods>a{
+    text-decoration: none;
+    color: black;
+}
+
+#prod>a:hover , #prods>a:hover{
+    cursor: pointer;
+    color:#2e3192;
+}
+
+.MainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.MainContainer>div:nth-child(1){
+    width: 28.6%;
+}
+
+.MainContainer>div:nth-child(2){
+    border: 1px solid blue;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MainContainer>div:nth-child(2)>div{
+    width: 32%;
+    height: 170px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 98%;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.con>div:nth-child(2){
+    width: 80%;
+    display: grid;
+    margin-top: 7px;
+}
+.con>div:nth-child(2)>a{
+     width: 194px;
+}
+
+.con > div > a {
+    width: 10%;
+    text-decoration: none;
+}
+
+.con>div>img{
+    width: 100px;
+    height: 100px;
+}
+.con>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prods{
+    margin: auto;
+    margin-top: 20px;
+    width: 97%;
+    height: auto;
+    border-top: 3px solid #2e3192;
+}

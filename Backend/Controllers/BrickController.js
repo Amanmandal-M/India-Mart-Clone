@@ -50,39 +50,6 @@ const PostBrick = async (req, res) => {
     }
 }
 
-// Update Data by Id
-const UpdateBrick = async (req, res) => {
-    const ID = req.params.id;
-    const payload = req.body;
-    try {
-        const data = await BrickModel.findByIdAndUpdate({_id:ID}, payload)
-        res.send({
-            "Message":"Data updated successfully"
-        })
-    } catch (error) {
-        console.log(`Error in UpdateBrick : ${error}`);
-        res.send({
-            "Message": "Error in UpdateBrick : ${error}",
-        })
-    }
-}
-
-// Delete Data by Id
-const DeleteBrick = async (req, res) => {
-    const ID = req.params.id;
-    try {
-        const data = await BrickModel.findByIdAndDelete({_id:ID})
-        res.send({
-            "Message":"Data Deleted successfully"
-        })
-    } catch (error) {
-        console.log(`Error in DeleteBrick : ${error}`);
-        res.send({
-            "Message": "Error in DeleteBrick : ${error}",
-        })
-    }
-}
-
 // Pagination
 const GetLimit = async (req, res) => {
     const query = req.query.limit
@@ -149,4 +116,4 @@ const GetbySortDscToAsc = async (req, res) => {
     }
 }
 
-module.exports = {GetBrick,PostBrick,UpdateBrick,DeleteBrick,GetLimit,GetbyTitle,GetBrickById,GetbySortAscToDsc,GetbySortDscToAsc}
+module.exports = {GetBrick,PostBrick,GetLimit,GetbyTitle,GetBrickById,GetbySortAscToDsc,GetbySortDscToAsc}

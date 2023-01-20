@@ -5,9 +5,13 @@ require('dotenv').config();
 // Routers and Mongoose Connectors
 
 const { connection } = require('./Config/db');
+const { validator } = require('./Middlewares/AuthenticatorMiddleware');
+const { AdminRouter } = require('./Routes/AdminRoute');
 const { BrickRouter } = require('./Routes/BrickRouter');
 const { ExcavatorRouter } = require('./Routes/ExcavatorRouter');
 const { UserRouter } = require('./Routes/UserRouter');
+
+
 
 
 // Calling Routers & converting data to json 
@@ -21,6 +25,8 @@ app.get('/',(req,res)=>{
 app.use("/products" ,BrickRouter)
 app.use("/products" ,ExcavatorRouter)
 app.use("/users",UserRouter)
+app.use(validator);
+app.use("/admin",AdminRouter)
 
 
 

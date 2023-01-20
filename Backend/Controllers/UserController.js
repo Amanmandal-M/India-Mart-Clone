@@ -58,7 +58,7 @@ const loginUser = async (req, res) => {
       if (userData.length > 0) {
         bcrypt.compare(Password, userData[0].Password, (err, result) => {
           if (result) {
-            const token = jwt.sign({ UserID: userData[0]._id }, process.env.key ,{expiresIn:"4h"});
+            const token = jwt.sign({payload : "project"}, process.env.KEY ,{expiresIn:"4h"});
             res.send({
               "Message": "Login successful",
               "Token": token,
