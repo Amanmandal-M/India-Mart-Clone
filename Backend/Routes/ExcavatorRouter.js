@@ -1,5 +1,5 @@
 const express = require('express');
-const {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,
+const {GetExcavator,GetExcavatorById,PostExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,
     GetbySortDscToAsc} = require('../Controllers/ExcavatorController')
 const ExcavatorRouter = express.Router();
 
@@ -11,12 +11,6 @@ ExcavatorRouter.get('/Excavator/:id',GetExcavatorById)
 
 // Post
 ExcavatorRouter.post("/ExcavatorPost",PostExcavator)
-
-// Update
-ExcavatorRouter.patch("/Exupdate/:id",UpdateExcavator)
-
-// Delete
-ExcavatorRouter.delete("/Exdelete/:id",DeleteExcavator)
 
 //Pagination
 ExcavatorRouter.get('/Exlimit',GetLimit)

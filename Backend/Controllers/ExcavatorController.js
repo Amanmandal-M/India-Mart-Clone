@@ -49,39 +49,6 @@ const PostExcavator = async (req, res) => {
     }
 }
 
-// Update Data by Id
-const UpdateExcavator = async (req, res) => {
-    const ID = req.params.id;
-    const payload = req.body;
-    try {
-        const data = await ExcavatorModel.findByIdAndUpdate({_id:ID}, payload)
-        res.send({
-            "Message":"Data updated successfully"
-        })
-    } catch (error) {
-        console.log(`Error in UpdateExcavator : ${error}`);
-        res.send({
-            "Message": "Error in UpdateExcavator : ${error}",
-        })
-    }
-}
-
-// Delete Data by Id
-const DeleteExcavator = async (req, res) => {
-    const ID = req.params.id;
-    try {
-        const data = await ExcavatorModel.findByIdAndDelete({_id:ID})
-        res.send({
-            "Message":"Data Deleted successfully"
-        })
-    } catch (error) {
-        console.log(`Error in DeleteExcavator : ${error}`);
-        res.send({
-            "Message": "Error in DeleteExcavator : ${error}",
-        })
-    }
-}
-
 // Pagination
 const GetLimit = async (req, res) => {
     const query = req.query.limit
@@ -147,4 +114,4 @@ const GetbySortDscToAsc = async (req, res) => {
         })
     }
 }
-module.exports = {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,GetbySortDscToAsc}
+module.exports = {GetExcavator,GetExcavatorById,PostExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,GetbySortDscToAsc}
