@@ -218,6 +218,7 @@ margin-top: 5px;
     width: 97%;
     height: auto;
     border-top: 3px solid #2e3192;
+    /* box style */
 }
 
 #prod>a>h1{
@@ -239,13 +240,33 @@ margin-top: 5px;
     /* border-bottom: 2px solid #2e3192; */
 }
 
-.products a {
-    text-decoration: none;
-    color: black;
+.MainContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    border: 1px solid red;
+    padding: 5px;
 }
 
-.products a:hover {
-    cursor: pointer;
-    border-bottom: 1px solid rgb(167, 14, 14);
+.MainContainer>div:nth-child(1){
+    border: 1px solid rgb(246, 255, 0);
+    width: 28.6%;
 }
 
+.MainContainer>div:nth-child(2){
+    border: 1px solid blue;
+    width: 72%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MainContainer>div:nth-child(2)>div{
+    border : 1px solid green;
+    width: 30.5%;
+    height: 140px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
