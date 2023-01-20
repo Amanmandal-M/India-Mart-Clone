@@ -162,7 +162,7 @@
     border: 1px solid red;
     margin-top: 5px;
     display: flex;
-
+    justify-content: space-between;
 }
 
 #sliding{
@@ -172,10 +172,11 @@
 
 
 #contentSliding{
-    border: 1px solid blue
-    width: 48%;
+    border: 1px solid blue;
+    width: 50%;
+    margin-left: 10px;
 }
 
 .mainHeader{
-    margin-top: 20px;
+    margin-top: 70px;
 }
