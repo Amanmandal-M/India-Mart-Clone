@@ -1,5 +1,6 @@
 const express = require('express');
-const {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle} = require('../Controllers/ExcavatorController')
+const {GetExcavator,GetExcavatorById,PostExcavator,UpdateExcavator,DeleteExcavator,GetLimit,GetbyTitle,GetbySortAscToDsc,
+    GetbySortDscToAsc} = require('../Controllers/ExcavatorController')
 const ExcavatorRouter = express.Router();
 
 // Get
@@ -22,5 +23,11 @@ ExcavatorRouter.get('/Exlimit',GetLimit)
 
 //Title
 ExcavatorRouter.get("/Extitle",GetbyTitle)
+
+// Sort By price asc to dsc
+ExcavatorRouter.get("/Exasctodesc",GetbySortAscToDsc)
+
+// Sort By price dsc to asc
+ExcavatorRouter.get("/Exdesctoasc",GetbySortDscToAsc)
 
 module.exports = {ExcavatorRouter}
