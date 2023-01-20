@@ -167,16 +167,41 @@
 
 #sliding{
     border: 1px solid green;
-    width: 48%;
+    width: 65%;
 }
 
 
 #contentSliding{
     border: 1px solid blue;
-    width: 50%;
+    width: 35%;
     margin-left: 10px;
+    padding: 10px;
 }
 
 .mainHeader{
-    margin-top: 70px;
+    margin-top: 60px;
+}
+
+.sec{
+    margin-top: 30px;
+    width: 70%;
+    height: 90px;
+    font-family: arial;
+    word-spacing: 6px;
+}
+
+.headsin{
+    font-weight: bolder ;
+    font-size: 42px;
+}
+
+#contentSliding>div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contentSliding>div>div{
+    border: 1px solid yellow;
+    padding: 15px;
 }
