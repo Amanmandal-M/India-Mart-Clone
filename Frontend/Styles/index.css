@@ -264,9 +264,41 @@ margin-top: 5px;
 }
 
 .MainContainer>div:nth-child(2)>div{
-    border : 1px solid green;
-    width: 30.5%;
-    height: 140px;
-    margin-left: 20px;
+    width: 32%;
+    height: 170px;
+    margin-left: 5px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    width: 106%;
+    height: 100%;
+}
+
+.con>div:nth-child(2){
+    width: 80%;
+    display: grid;
+}
+.con>div:nth-child(2)>a{
+     width: 194px;
+}
+
+.con > div > a {
+    width: 10%;
+    text-decoration: none;
+}
+
+.con>div>img{
+    width: 100px;
+    height: 100px;
+}
+.con>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
