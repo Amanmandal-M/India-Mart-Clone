@@ -47,6 +47,11 @@
     border-bottom: 3px solid rgb(14, 205, 11);
     cursor: pointer;
 }
+.second>div>a{
+    text-decoration: none;
+    color: black;
+}
+
 
 #imagesDiv>img{
     width: 100%;

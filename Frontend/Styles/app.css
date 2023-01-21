@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(120, 204, 249, 0.791);
+}
+
+
+.lists{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 8px;
+}
+
+.lists>a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder; 
+}
+
+
+.lists>a:hover{
+    border-bottom: 5px solid purple;
+    color: rgb(246, 14, 25);
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+#CrudOperations {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 330px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+#helping{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    margin-top: 2px;
+}
+
+input{
+    margin-left: 100px;
+    width: 250px;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+input[type="text"][id="title"]{
+    border: 1px solid chartreuse;
+    margin-top: 10px;
+}
+
+input[type="text"][id="desc"]{
+    border: 1px solid red;
+    margin-left: 39px;
+}
+
+input[type="number"][id="price"]{
+    border: 1px solid green;
+    margin-left: 98px;
+}
+input[type="url"][id="imageUrl"]{
+    border: 1px solid brown;
+    margin-left: 54px;
+}
+input[type="number"][id="quantity"]{
+    border: 1px solid pink;
+    margin-left: 63px;
+}
+
+#SubmitButton{
+    display: block;
+    margin: auto;
+    padding: 8px;
+    width: 30%;
+    border-radius: 15px;
+    font-size: 22px;
+    margin-top: 10px;
+    border: none;
+    background-color: aquamarine;
+}
+
+#SubmitButton:hover{
+    background-color: rgb(76, 231, 76);
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+    font-family:cursive;
+    font-weight: 700;
+    color: red;
+}
+
+label{
+    font-weight: bolder;
+    font-size: 19px;
+
+}
+
+#GetButton {
+    margin-top: -280px;
+    width: 15%;
+    margin-left: 20px;
+}
+
+#GetButton>button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(74, 239, 239);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+#GetButton>button:hover{
+    cursor: pointer;
+    background-color: rgb(133, 255, 84);
+    border-radius: 10px;
+    width: 125%;
+    font-size: 22px;
+    font-family:cursive;
+    font-weight: 550;
+    color: rgb(0, 8, 4);
+}
+
+
+#Container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 280px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.ProductsData{
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+}
+
+.ProductsData>img{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.ProductsData>p{
+    margin-left: 10px;
+}
+
