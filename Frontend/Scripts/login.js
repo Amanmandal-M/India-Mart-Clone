@@ -1,16 +1,11 @@
-// const BaseUrl =  ;
-// const BaseRegister = `${BaseUrl}/users`
-// const LoginUrl = `${BaseRegister}/login`
+const BaseUrl = "https://hindbazaar-mandal.up.railway.app";
+const BaseRegister = `${BaseUrl}/users`
+const LoginUrl = `${BaseRegister}/login`
 
 document.querySelector('#photo').addEventListener("click", () =>{
   location.pathname="/Frontend/index.html"
 })
 
-
-const ButtonProduct = document.querySelector("#pro");
-ButtonProduct.addEventListener("click", () =>{
-  alert("Please Login First!");
-}) 
 
 
 const submitButton = document.getElementById("form");
@@ -23,8 +18,6 @@ submitButton.addEventListener("submit", (e) => {
 function getData() {
   const email = document.getElementById("EmailId").value;
   const password = document.getElementById("Password").value;
-  sessionStorage.setItem("EmailId", email)
-  sessionStorage.setItem("Password", password)
   let obj = {
     EmailId: email,
     Password: password,
@@ -45,12 +38,14 @@ const dataImportDB = async (obj) => {
     if (res.ok==true) {
         let data = await res.json();
         console.log(data);
-        alert("Login Successfully")
+        if(data.Message == "Wrong Credentials") {
+          alert("Login Failed")
+        }else{
             const name = data.Data[0].Username;
-            const tokenCopy = data.Token;                        //user Takes token from here
             sessionStorage.setItem("Username", name);
-            sessionStorage.setItem("Token", tokenCopy);
-            location.pathname = "/Views/app.html"
+            location.pathname = "/Frontend/index.html"
+            alert("Login Successfully")
+        }
     } else {
       alert("Login failed");
     }

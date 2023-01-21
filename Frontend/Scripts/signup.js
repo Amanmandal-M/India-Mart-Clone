@@ -1,15 +1,9 @@
-// const BaseUrl = "" ;
-// const BaseRegister = `${BaseUrl}/`
-// const RegisterUrl = `${BaseRegister}/`
+const BaseUrl = "https://hindbazaar-mandal.up.railway.app" ;
+const BaseRegister = `${BaseUrl}/users`
+const RegisterUrl = `${BaseRegister}/register`
 
 document.querySelector('#photo').addEventListener("click", () =>{
   location.pathname="/Frontend/index.html"
-})
-
-
-const ButtonProduct = document.querySelector("#pro");
-ButtonProduct.addEventListener("click", () =>{
-  alert("Please Sign Up First!");
 })
 
 
@@ -27,14 +21,12 @@ forms.addEventListener("submit", (e) => {
 
 function dataInput() {
   let inputs = document.querySelectorAll("input");
-  let selected = document.querySelector("#Role").value;
   let obj = {};
   for (let i = 0; i < inputs.length - 1; i++) {
     if (inputs[i].id == "ConfirmPassword") {
       continue;
     } else {
       obj[inputs[i].id] = inputs[i].value;
-      obj["Role"] = selected;
     }
   }
   console.log(obj);
@@ -52,9 +44,9 @@ const dataImportDB = async (obj) => {
     });
     let data = await res.json();
     console.log(data);
-    if (res.status === 200) {
+    if (data.Status === 200) {
       alert("Signup Successfully");
-      sessionStorage.clear()
+      // sessionStorage.clear()
       setTimeout(() => {
         document.querySelector("#Username").value = "";
         document.querySelector("#EmailId").value = "";
@@ -63,9 +55,9 @@ const dataImportDB = async (obj) => {
         document.querySelector("#Password").value = "";
         document.querySelector("#ConfirmPassword").value = "";
       },0);
-      location.pathname = "/Views/login.html";
+      location.pathname = "/Frontend/Views/login.html";
     } else {
-      alert("Something Went Wrong");
+      alert("User Already Registered");
     }
   } catch (error) {
     alert("Error in Fetching");
