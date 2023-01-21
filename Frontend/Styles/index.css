@@ -322,3 +322,28 @@ margin-top: 5px;
     height: auto;
     border-top: 3px solid #2e3192;
 }
+
+
+/* Brand Section */
+
+#BrandContainer{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 97%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    
+}
+
+#BrandContainer>div:nth-child(1){
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#smallContainer {
+    height: 90%;
+    margin-top: 18px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6,1fr);
+}
