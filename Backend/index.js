@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 require('dotenv').config();
 
 // Routers and Mongoose Connectors
@@ -17,7 +18,7 @@ const { UserRouter } = require('./Routes/UserRouter');
 // Calling Routers & converting data to json 
 
 app.use(express.json());
-
+app.use(cors());
 app.get('/',(req,res)=>{
     res.send("Welcome in My Project Api")
 })

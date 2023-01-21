@@ -66,7 +66,10 @@ const loginUser = async (req, res) => {
             });
 
           } else {
-            res.send("Wrong Credentials");
+            res.send({
+              "Message": "Wrong Credentials",
+               "Status" : 400
+            });
           }
         });
       } else {
