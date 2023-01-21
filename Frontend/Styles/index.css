@@ -297,6 +297,12 @@ margin-top: 5px;
 .con > div > a {
     width: 10%;
     text-decoration: none;
+    color: black;
+}
+
+.con > div > a:hover {
+    text-decoration:underline;
+    color: blue;
 }
 
 .con>div>img{
