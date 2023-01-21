@@ -46,7 +46,7 @@ const dataImportDB = async (obj) => {
     console.log(data);
     if (data.Status === 200) {
       alert("Signup Successfully");
-      // sessionStorage.clear()
+      sessionStorage.clear()
       setTimeout(() => {
         document.querySelector("#Username").value = "";
         document.querySelector("#EmailId").value = "";
