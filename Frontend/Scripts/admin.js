@@ -1,12 +1,16 @@
-const BaseUrl = "https://pear-gleaming-skunk.cyclic.app";
+const BaseUrl = "https://hindbazaar-mandal.up.railway.app";
 const DefaultUrl = `${BaseUrl}/products`;
-const GetAllProductsUrl = `${DefaultUrl}/`; // GET
-const PostUrl = `${DefaultUrl}/create`; // POST
-const UpdateUrl = `${DefaultUrl}/update/id`; // PATCH
-const DeleteUrl = `${DefaultUrl}/delete/id`; // DELETE
+const GetAllProductsUrl = `${DefaultUrl}/`;                // GET
+const PostUrl = `${DefaultUrl}/create`;                   // POST
+
+
+const UpdateUrl = `${DefaultUrl}/update/id`;             // PATCH
+const DeleteUrl = `${DefaultUrl}/delete/id`;            // DELETE
 
 const Username = sessionStorage.getItem("Username");
 const Token = sessionStorage.getItem("Token");
+
+
 
 // Create A Product
 
