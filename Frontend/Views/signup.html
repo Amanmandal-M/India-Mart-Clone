@@ -7,7 +7,67 @@
     <title>SignUp Page</title>
 </head>
 <body>
-    
+    <div id="NavBar">
+        <div class="first">
+            <img id="photo" src="../Resources/Logo.png" alt="Error">
+            <h1 id="heading">HindBazaar</h1>
+        </div>
+
+        <div class="second">
+            <div>
+                <img src="../Resources/shopp.jpeg" alt="Error">
+                <p>Shopping</p>
+            </div>
+            <div>
+                <img src="../Resources/sell.jpeg" alt="Error">
+                <p>Sell</p>
+            </div>
+            <div>
+                <img src="../Resources/help.jpeg" alt="Error">
+                <p>Help</p>
+            </div>
+            <div>
+                <img src="../Resources/message.jpeg" alt="Error">
+                <p>Messages</p>
+            </div>
+            <div>
+                <img src="../Resources/sign.jpeg" alt="Error">
+                <a href="./login.html"><p>Login In</p></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="middle">
+        <h1 class="he">Sign Up</h1>
+        <form id="form">
+            <label for="">Username</label>
+            <br>
+            <input type="text" id="Username" required placeholder="Enter Username">
+            <br>
+            <label for="">Email Id</label>
+            <br>
+            <input type="email" id="EmailId" required placeholder="Enter email">
+            <br>
+            <label for="">Date of Birth</label>
+            <br>
+            <input type="date" id="DateOfBirth" required>
+            <br>
+            <label for="">Location</label>
+            <br>
+            <input type="text" id="Location" required placeholder="Enter Location">
+            <br>
+            <label for="">Password</label>
+            <br>
+            <input type="password" id="Password" required placeholder="Enter Password">
+            <br>
+            <label for="">Confirm Password</label>
+            <br>
+            <input type="password" id="ConfirmPassword" required placeholder="Confirm Password">
+            <br>
+            <input type="submit" required>
+            <br>
+        </form>
+    </div>
 </body>
 </html>
 <script src="../Scripts/signup.js"></script>

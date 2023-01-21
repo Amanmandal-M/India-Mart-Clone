@@ -47,6 +47,11 @@
     border-bottom: 3px solid rgb(14, 205, 11);
     cursor: pointer;
 }
+.second>div>a{
+    text-decoration: none;
+    color: black;
+}
+
 
 #imagesDiv>img{
     width: 100%;
@@ -242,7 +247,8 @@ margin-top: 5px;
     margin: auto;
     margin-top: 20px;
     height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     padding: 5px;
 }
 
@@ -251,7 +257,7 @@ margin-top: 5px;
 }
 
 .MainContainer>div:nth-child(2){
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 70%;
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +275,8 @@ margin-top: 5px;
 .con{
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 98%;
     height: 100%;
     margin-top: 5px;
@@ -281,7 +288,8 @@ margin-top: 5px;
     margin-top: 7px;
 }
 .con>div:nth-child(2)>a{
-     width: 194px;
+    width: 180px;
+    margin-left: 4px;
 }
 
 .con > div > a {

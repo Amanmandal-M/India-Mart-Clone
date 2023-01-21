@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+
+<body>
+
+    <div id="nav">
+        <h1 id="admin">Admin Panel</h1>
+    </div>
+
+    <div id="CrudOperations">
+        <h1>Add Product</h1>
+        <div id="helping">
+            <label for="">Title</label>
+            <input type="text" placeholder="Enter Title" id="title" required>
+            <br>
+            <label for="">Description</label>
+            <input type="text" placeholder="Enter Description" id="desc" required>
+            <br>
+            <label for="">Price</label>
+            <input type="number" placeholder="Enter Price" id="price" required>
+            <br>
+            <label for="">Image Url</label>
+            <input type="url" placeholder="Enter Image Url" id="imageUrl" required>
+            <br>
+            <label for="">Quantity</label>
+            <input type="number" placeholder="Enter Quantity" id="quantity" required>
+            <br>
+            <button id="SubmitButton">Submit</button>
+        </div>
+    </div>
+
+
+    <div id="GetButton">
+        <button>All Products</button>
+    </div>
+
+    <div id="Container">
+        <!-- Append Here -->
+    </div>
+</body>
+
+</html>
+<script src="../Scripts/admin.js"></script>
+<link rel="stylesheet" href="../Styles/admin.css">
