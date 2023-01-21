@@ -5,3 +5,4 @@ document.querySelector("#sign").addEventListener('click',(e)=>{
 document.querySelector("#admin").addEventListener('click',(e)=>{
     location.pathname = '/Frontend/Views/adminLogin.html';
 })
+
