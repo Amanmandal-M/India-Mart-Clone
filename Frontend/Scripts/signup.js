@@ -1,6 +1,11 @@
-const BaseUrl = "https://secondbackendproject-production.up.railway.app" ;
-const BaseRegister = `${BaseUrl}/users`
-const RegisterUrl = `${BaseRegister}/register`
+// const BaseUrl = "" ;
+// const BaseRegister = `${BaseUrl}/`
+// const RegisterUrl = `${BaseRegister}/`
+
+document.querySelector('#photo').addEventListener("click", () =>{
+  location.pathname="/Frontend/index.html"
+})
+
 
 const ButtonProduct = document.querySelector("#pro");
 ButtonProduct.addEventListener("click", () =>{
