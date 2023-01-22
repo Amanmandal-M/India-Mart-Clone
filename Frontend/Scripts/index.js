@@ -6,3 +6,7 @@ document.querySelector("#admin").addEventListener('click',(e)=>{
     location.pathname = '/Frontend/Views/adminLogin.html';
 })
 
+
+document.querySelector(".con").addEventListener('click',(e)=>{
+    location.pathname = '/Frontend/Views/product.html';
+})
