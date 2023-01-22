@@ -57,18 +57,22 @@
 
 #main{
     border: 1px solid red;
+    border-radius: 10%;
     width: 50%;
     margin: auto;
     margin-top: 50px;
-    height: 400px;
+    height: 420px;
 }
 
-input{
+input[type="text"],input[type="Number"]{
     width: 50%;
     display: block;
     margin: auto;
     margin-top: 20px;
     padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgb(166, 219, 20);
 }
 
 #main>button{
@@ -76,4 +80,39 @@ input{
     display: block;
     margin-top: 25px;
     padding: 10px 10px;
+    width: 25%;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: crimson;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    height: auto;
+}
+#otp{
+    width: 7%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: 1px solid rgb(166, 219, 20);
+}
+
+#otps{
+    width: 21%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+#otps:hover{
+    cursor: pointer;
+    background-color: red;
+    color: black;
 }
