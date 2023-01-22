@@ -347,3 +347,27 @@ margin-top: 5px;
     gap: 10px;
     grid-template-columns: repeat(6,1fr);
 }
+
+
+/* Footer Section */
+
+#footer{
+    width: 97%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    border:1px solid red;
+}
+
+#footer>div:nth-child(1){
+    border: 1px solid green;
+    width: 40%;
+}
+
+#footer>div:nth-child(1)>img{
+    width: 65%;
+    height: 100%;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+
