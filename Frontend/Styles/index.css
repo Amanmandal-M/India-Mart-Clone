@@ -356,18 +356,41 @@ margin-top: 5px;
     margin: auto;
     margin-top: 20px;
     height: auto;
-    border:1px solid red;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #footer>div:nth-child(1){
-    border: 1px solid green;
     width: 40%;
 }
 
 #footer>div:nth-child(1)>img{
     width: 65%;
-    height: 100%;
+    height: 90%;
     padding-left: 150px;
     padding-top: 50px;
 }
 
+#footer>div:nth-child(2){
+    width:60%;
+    padding: 100px;
+}
+
+
+
+
+
+button{
+    background-color: #19a598;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 13px;
+}
+
+#contact{
+    border: 1px solid #19a598;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 13px;
+}
