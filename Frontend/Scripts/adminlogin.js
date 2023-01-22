@@ -1,4 +1,4 @@
-const BaseUrl = "http://localhost:5094"
+const BaseUrl = "https://hindbazaar-mandal.up.railway.app"
 const DefaultUrl = `${BaseUrl}/admin`
 const CheckUrl = `${DefaultUrl}/check`
 const OtpButton = document.querySelector("#otps")
