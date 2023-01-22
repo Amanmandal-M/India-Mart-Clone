@@ -1,5 +1,5 @@
 const BaseUrl = "http://localhost:5094"
-
+const CheckUrl = `${BaseUrl}/check`
 const OtpButton = document.querySelector("#otps")
 
 var data;
@@ -23,18 +23,73 @@ SubmitButton.addEventListener("click",()=>{
         "Password":password
     }    
     if(data==valCheck){
-        main(obj)
+        checksDetails(obj)
     }else{
         alert("Fill Properly all the Fields")
     }
 })
 
 
-const main = async ()=>{
+const checksDetails = (obj)=>{
     try {
-        const res = await fetch ()
+        const res = fetch(CheckUrl,{
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        })
+        const data = res.json();
+        if(data.Status == 200){
+            alert("Hello Admin!");
+            setTimeout(()=>{
+                HTML();
+            },1000)
+        }else{
+            alert('You are not Authorized')
+        }
     } catch (error) {
         console.log(`Error: ${error}`);
-        alert('You are not authorized')
+        alert('You are not Authorized')
     }
+}
+
+
+
+
+const HTML = () => {
+    const MainDiv = document.querySelector('#main')
+    MainDiv.innerHTML = ''
+    MainDiv.innerHTML=`
+        <div id="CrudOperations">
+            <h1>Add Product</h1>
+            <div id="helping">
+                <label for="">Title</label>
+                <input type="text" placeholder="Enter Title" id="title" required>
+                <br>
+                <label for="">Description</label>
+                <input type="text" placeholder="Enter Description" id="desc" required>
+                <br>
+                <label for="">Price</label>
+                <input type="number" placeholder="Enter Price" id="price" required>
+                <br>
+                <label for="">Image Url</label>
+                <input type="url" placeholder="Enter Image Url" id="imageUrl" required>
+                <br>
+                <label for="">Quantity</label>
+                <input type="number" placeholder="Enter Quantity" id="quantity" required>
+                <br>
+                <button id="SubmitButton">Submit</button>
+            </div>
+        </div>
+
+
+        <div id="GetButton">
+            <button>All Products</button>
+        </div>
+
+        <div id="Container">
+            <!-- Append Here -->
+        </div>
+    `
 }
