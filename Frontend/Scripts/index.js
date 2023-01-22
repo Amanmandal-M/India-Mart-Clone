@@ -12,5 +12,5 @@ document.querySelector(".con").addEventListener('click',(e)=>{
 })
 
 document.querySelector(".producting").addEventListener('click',(e)=>{
-    location.pathname = '/Frontend/Views/product.html';
+    location.pathname = '/Views/product.html';
 })
