@@ -51,12 +51,6 @@ const mainfetch = async () =>{
     }
 }
 
-// const Values = () => {
-//     RightDiv.innerHTML = ""
-//     RightDiv.innerHTML = `
-       
-//     `
-// }
 
 const displayData = (data)=>{
     data.forEach(el=>{
@@ -76,13 +70,10 @@ const displayData = (data)=>{
             price.innerHTML = el.Price
         }
 
-        const divs = document.createElement("div")
-        divs.innerHTML = JSON.stringify(el.Description)
-
         const Button = document.createElement("button")
         Button.innerHTML = "Add to Cart"
 
-        div.append(image,title,price,divs,Button)
+        div.append(image,title,price,Button)
         RightDiv.append(div);
     })
 }
