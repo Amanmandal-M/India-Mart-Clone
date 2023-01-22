@@ -1,4 +1,4 @@
-const baseUrl = `http://localhost:5094`
+const baseUrl = `https://hindbazaar-mandal.up.railway.app`
 const defaultUrl = `${baseUrl}/products`               // default Endpoint
 
 // Bricks
