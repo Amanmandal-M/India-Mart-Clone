@@ -59,4 +59,17 @@
     width: 95%;
     height: auto;
     margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#left{
+    border: 1px solid black;
+    width: 25%;
+    height: 300px;
+}
+#right{
+    border: 1px solid blue;
+    width: 70%;
+    height: 1000px;   
 }
