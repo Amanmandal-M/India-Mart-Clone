@@ -26,6 +26,15 @@ const excavatorButton = document.querySelector("#excavator");
 // Appending Values
 const RightDiv = document.querySelector("#right")
 
+// Search Products
+const butVal = document.querySelector(".but")
+
+
+// Fetching By Clicking
+
+document.querySelector('#photo').addEventListener("click", () =>{
+    location.pathname="/Frontend/index.html"
+})
 
 brickButton.addEventListener("click",(e)=>{
     RightDiv.innerHTML = ""
@@ -35,6 +44,19 @@ brickButton.addEventListener("click",(e)=>{
 excavatorButton.addEventListener("click",(e)=>{
     RightDiv.innerHTML = ""
     mainfetch2();
+})
+
+butVal.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const SearchVal = document.querySelector("#ProductsVal").value;
+
+    if(SearchVal==""){
+        alert("Please Enter a Product")
+    }else{
+        RightDiv.innerHTML = ""
+        searchFetching(SearchVal)
+    }
+    
 })
 
 
@@ -59,6 +81,7 @@ mainfetch1();
 
 
 const displayData1 = (data)=>{
+    RightDiv.innerHTML = ""
     data.forEach(el=>{
         const div = document.createElement("div");
         div.id = "smallDiv";
@@ -104,6 +127,7 @@ const mainfetch2 = async () =>{
 }
 
 const displayData2 = (data)=>{
+    RightDiv.innerHTML=""
     data.forEach(el=>{
         const div = document.createElement("div");
         div.id = "smallDiv";
@@ -127,4 +151,24 @@ const displayData2 = (data)=>{
         div.append(image,title,price,Button)
         RightDiv.append(div);
     })
+}
+
+const searchFetching = async(SearchVal)=>{
+    try {
+        const res = await fetch(`${BrdataBytitleQuery}?q=${SearchVal}`,{
+            method: "GET",
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        });
+        const data = await res.json();
+       if(data.Message !== "Data not found"){
+            displayData1(data)
+       }else{
+         alert("Data Not Found")
+       }
+    } catch (error) {
+        console.log(`Error: ${error}`);
+        alert(`Error: ${error}`);
+    }
 }

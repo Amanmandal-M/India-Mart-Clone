@@ -7,7 +7,6 @@ document.querySelector('#photo').addEventListener("click", () =>{
 })
 
 
-
 const submitButton = document.getElementById("form");
 
 submitButton.addEventListener("submit", (e) => {

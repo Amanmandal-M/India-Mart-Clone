@@ -102,6 +102,52 @@
     text-align: center;
 }
 #smallDiv>img{
-    height: 50%;
+    height: 48%;
     margin-bottom: 10px;
+}
+
+#title{
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+#title>input{
+    margin: auto;
+    width: 60%;
+    padding: 15px 15px;
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+    font-size: 22px;
+}
+.but{ 
+    padding: 15px 15px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(8, 126, 230);
+}
+.but:hover{
+    width: 30%;
+    background-color: lightsalmon ;
+    cursor: pointer;
+    border:none
+}
+
+
+#smallDiv>button{
+    width: 60%;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(100, 231, 13);
+    margin-top: 10px;
+}
+
+#smallDiv>button:hover{
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+    background-color: lightcoral;
 }
