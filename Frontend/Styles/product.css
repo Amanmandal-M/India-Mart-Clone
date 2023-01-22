@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#NavBar{
+    width: 100%;
+    height: 66px;
+    background-color: #2e3192;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.first>img{
+    width: 70px;
+    height: 65px;
+    border-radius: 50px;
+}
+.first:hover{
+    cursor: pointer;
+}
+.heading{
+    padding-left: 5px;
+    font-family:cursive;
+    color: white;
+}
+
+
+.second{
+    width: 30%;
+    height: 98%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.second>div{
+    padding-left: 5px;
+    height: 94%;
+    padding-top: 5px;
+}
+.second>div:hover{
+    border-bottom: 3px solid rgb(14, 205, 11);
+    cursor: pointer;
+}
+.second>div>a{
+    text-decoration: none;
+    color: black;
+}
+
+#mainProducts{
+    margin: auto;
+    width: 95%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#left{
+    border: 1px solid black;
+    width: 25%;
+    height: 100%;
+    margin-left: 5px;
+}
+#right{
+    /* border: 1px solid blue; */
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,0.5fr);
+    gap: 20px;
+}
+
+#left>div:nth-child(1){
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+#left>div:nth-child(1)>h2{
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+#brick,#excavator{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    display: block;
+}
+
+#smallDiv{
+    border: 1px solid darkblue;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#smallDiv>img{
+    height: 48%;
+    margin-bottom: 10px;
+}
+
+#title{
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+#title>input{
+    margin: auto;
+    width: 60%;
+    padding: 15px 15px;
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+    font-size: 22px;
+}
+.but{ 
+    padding: 15px 15px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(8, 126, 230);
+}
+.but:hover{
+    width: 30%;
+    background-color: lightsalmon ;
+    cursor: pointer;
+    border:none
+}
+
+
+#smallDiv>button{
+    width: 60%;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(100, 231, 13);
+    margin-top: 10px;
+}
+
+#smallDiv>button:hover{
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+    background-color: lightcoral;
+}
+
+button:hover{
+    cursor: pointer;
+}

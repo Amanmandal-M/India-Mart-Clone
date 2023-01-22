@@ -251,7 +251,9 @@ margin-top: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     padding: 5px;
 }
-
+.MainContainer .aman{
+    width: 100%;
+}
 .MainContainer>div:nth-child(1){
     width: 28.6%;
 }
@@ -295,6 +297,12 @@ margin-top: 5px;
 .con > div > a {
     width: 10%;
     text-decoration: none;
+    color: black;
+}
+
+.con > div > a:hover {
+    text-decoration:underline;
+    color: blue;
 }
 
 .con>div>img{
@@ -313,4 +321,80 @@ margin-top: 5px;
     width: 97%;
     height: auto;
     border-top: 3px solid #2e3192;
+}
+
+
+/* Brand Section */
+
+#BrandContainer{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 97%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    
+}
+
+#BrandContainer>div:nth-child(1){
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#smallContainer {
+    height: 90%;
+    margin-top: 18px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6,1fr);
+}
+
+
+/* Footer Section */
+
+#footer{
+    width: 97%;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#footer>div:nth-child(1){
+    width: 40%;
+}
+
+#footer>div:nth-child(1)>img{
+    width: 65%;
+    height: 90%;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+
+#footer>div:nth-child(2){
+    width:60%;
+    padding: 100px;
+}
+
+
+
+
+
+button{
+    background-color: #19a598;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 13px;
+}
+
+#contact{
+    border: 1px solid #19a598;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 13px;
+}
+
+.con:hover{
+    cursor: pointer;
 }

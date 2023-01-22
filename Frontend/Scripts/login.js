@@ -7,7 +7,6 @@ document.querySelector('#photo').addEventListener("click", () =>{
 })
 
 
-
 const submitButton = document.getElementById("form");
 
 submitButton.addEventListener("submit", (e) => {
@@ -37,7 +36,6 @@ const dataImportDB = async (obj) => {
     });
     if (res.ok==true) {
         let data = await res.json();
-        console.log(data);
         if(data.Message == "Wrong Credentials") {
           alert("Login Failed")
         }else{
