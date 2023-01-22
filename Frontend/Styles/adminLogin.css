@@ -1,0 +1,258 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#NavBar{
+    width: 100%;
+    height: 66px;
+    background-color: #2e3192;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.first>img{
+    width: 70px;
+    height: 65px;
+    border-radius: 50px;
+}
+.first:hover{
+    cursor: pointer;
+}
+.heading{
+    padding-left: 5px;
+    font-family:cursive;
+    color: white;
+    border-bottom: none;
+}
+
+
+.second{
+    width: 30%;
+    height: 98%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.second>div{
+    padding-left: 5px;
+    height: 94%;
+    padding-top: 5px;
+}
+.second>div:hover{
+    border-bottom: 3px solid rgb(14, 205, 11);
+    cursor: pointer;
+}
+.second>div>a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+#main{
+    border: 1px solid red;
+    border-radius: 10%;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    height: 420px;
+}
+
+input[type="text"],input[type="Number"],input[type="password"]{
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid rgb(166, 219, 20);
+}
+
+#main>button{
+    margin: auto;
+    display: block;
+    margin-top: 25px;
+    padding: 10px 10px;
+    width: 25%;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: crimson;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    height: auto;
+}
+#otp{
+    width: 7%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: 1px solid rgb(166, 219, 20);
+}
+
+#otps{
+    width: 21%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+#otps:hover{
+    cursor: pointer;
+    background-color: red;
+    color: black;
+}
+
+
+
+/* ********** */
+
+#CrudOperations {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 330px;
+    width: 50%;
+    margin: auto;
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+#helping{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    margin-top: 2px;
+}
+
+input{
+    margin-left: 100px;
+    width: 250px;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+input[type="text"][id="title"]{
+    border: 1px solid chartreuse;
+    margin-top: 10px;
+}
+
+input[type="text"][id="desc"]{
+    border: 1px solid red;
+    margin-left: 39px;
+}
+
+input[type="number"][id="price"]{
+    border: 1px solid green;
+    margin-left: 98px;
+}
+input[type="url"][id="imageUrl"]{
+    border: 1px solid brown;
+    margin-left: 54px;
+}
+input[type="number"][id="quantity"]{
+    border: 1px solid pink;
+    margin-left: 63px;
+}
+
+#SubmitButton{
+    display: block;
+    margin: auto;
+    padding: 8px;
+    width: 30%;
+    border-radius: 15px;
+    font-size: 22px;
+    margin-top: 10px;
+    border: none;
+    background-color: aquamarine;
+}
+
+#SubmitButton:hover{
+    background-color: rgb(76, 231, 76);
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+    font-family:cursive;
+    font-weight: 700;
+    color: red;
+}
+
+label{
+    font-weight: bolder;
+    font-size: 19px;
+
+}
+
+#GetButton {
+    margin-top: -280px;
+    width: 15%;
+    margin-left: 20px;
+}
+
+#GetButton>button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(74, 239, 239);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+#GetButton>button:hover{
+    cursor: pointer;
+    background-color: rgb(133, 255, 84);
+    border-radius: 10px;
+    width: 125%;
+    font-size: 22px;
+    font-family:cursive;
+    font-weight: 550;
+    color: rgb(0, 8, 4);
+}
+
+
+#Container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 280px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.ProductsData{
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+}
+
+.ProductsData>img{
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.ProductsData>p{
+    margin-left: 10px;
+}
+
