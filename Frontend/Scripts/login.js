@@ -3,7 +3,7 @@ const BaseRegister = `${BaseUrl}/users`
 const LoginUrl = `${BaseRegister}/login`
 
 document.querySelector('#photo').addEventListener("click", () =>{
-  location.pathname="/Frontend/index.html"
+  location.pathname="/index.html"
 })
 
 
