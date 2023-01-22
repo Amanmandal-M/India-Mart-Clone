@@ -28,6 +28,7 @@
     padding-left: 5px;
     font-family:cursive;
     color: white;
+    border-bottom: none;
 }
 
 
@@ -64,7 +65,7 @@
     height: 420px;
 }
 
-input[type="text"],input[type="Number"]{
+input[type="text"],input[type="Number"],input[type="password"]{
     width: 50%;
     display: block;
     margin: auto;
@@ -126,7 +127,6 @@ h1{
     height: 330px;
     width: 50%;
     margin: auto;
-    margin-top: 50px;
     border-radius: 30px;
 }
 h1{

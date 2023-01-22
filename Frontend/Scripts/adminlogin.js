@@ -1,5 +1,6 @@
 const BaseUrl = "http://localhost:5094"
-const CheckUrl = `${BaseUrl}/check`
+const DefaultUrl = `${BaseUrl}/admin`
+const CheckUrl = `${DefaultUrl}/check`
 const OtpButton = document.querySelector("#otps")
 
 var data;
@@ -30,21 +31,21 @@ SubmitButton.addEventListener("click",()=>{
 })
 
 
-const checksDetails = (obj)=>{
+const checksDetails = async (obj)=>{
     try {
-        const res = fetch(CheckUrl,{
-            method: 'GET',
+        const res = await fetch(CheckUrl,{
+            method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(obj)
         })
-        const data = res.json();
+        const data = await res.json();
         if(data.Status == 200){
             alert("Hello Admin!");
             setTimeout(()=>{
                 HTML();
-            },1000)
+            },0)
         }else{
             alert('You are not Authorized')
         }
@@ -58,9 +59,12 @@ const checksDetails = (obj)=>{
 
 
 const HTML = () => {
-    const MainDiv = document.querySelector('#main')
-    MainDiv.innerHTML = ''
-    MainDiv.innerHTML=`
+    const MainsDiv = document.querySelector('#mains')
+    MainsDiv.innerHTML = ""
+    MainsDiv.innerHTML=""
+    MainsDiv.style.height="auto"
+    MainsDiv.style.width="auto"
+    MainsDiv.innerHTML=`
         <div id="CrudOperations">
             <h1>Add Product</h1>
             <div id="helping">

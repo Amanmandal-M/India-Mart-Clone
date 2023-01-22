@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
 </head>
+
 <body>
-    <div id="NavBar">
-        <div class="first">
-            <img id="photo" src="../Resources/Logo.png" alt="Error">
-            <h1 class="heading">HindBazaar</h1>
-        </div>
-
-        <div class="second">
-            <div>
-                <img src="../Resources/shopp.jpeg" alt="Error">
-                <p>Shopping</p>
-            </div>
-            <div>
-                <img src="../Resources/sell.jpeg" alt="Error">
-                <p>Sell</p>
-            </div>
-            <div>
-                <img src="../Resources/help.jpeg" alt="Error">
-                <p>Help</p>
-            </div>
-            <div>
-                <img src="../Resources/message.jpeg" alt="Error">
-                <p>Messages</p>
-            </div>
-            <div id="sign">
-                <img src="../Resources/sign.jpeg" alt="Error">
-                <p>Sign In</p>
+    <header>
+        <div id="NavBar">
+            <div class="first">
+                <img id="photo" src="../Resources/Logo.png" alt="Error">
+                <h1 class="heading">HindBazaar</h1>
             </div>
 
-            <div id="admin">
-                <img src="../Resources/sign.jpeg" alt="Error">
-                <p>Admin</p>
+            <div class="second">
+                <div>
+                    <img src="../Resources/shopp.jpeg" alt="Error">
+                    <p>Shopping</p>
+                </div>
+                <div>
+                    <img src="../Resources/sell.jpeg" alt="Error">
+                    <p>Sell</p>
+                </div>
+                <div>
+                    <img src="../Resources/help.jpeg" alt="Error">
+                    <p>Help</p>
+                </div>
+                <div>
+                    <img src="../Resources/message.jpeg" alt="Error">
+                    <p>Messages</p>
+                </div>
+                <div id="sign">
+                    <img src="../Resources/sign.jpeg" alt="Error">
+                    <p>Sign In</p>
+                </div>
+
+                <div id="admin">
+                    <img src="../Resources/sign.jpeg" alt="Error">
+                    <p>Admin</p>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div id="main">
-        <h1>Admin Login</h1>
-        <input type="text" placeholder="Enter Username" id="user" required>
-        <input type="text" placeholder="Enter Password" id="pass" required>
-        <div id="otps">
-            Generate OTP
-        </div>
-        <div id="otp">
-            <!-- Append Otp -->
-        </div>
-        <input type="Number" placeholder="Enter OTP here" id="otpval">
+    <main id="mains">
+        <div id="main">
+            <h1>Admin Login</h1>
+            <input type="text" placeholder="Enter Username" id="user" required>
+            <input type="password" placeholder="Enter Password" id="pass" required>
+            <div id="otps">
+                Generate OTP
+            </div>
+            <div id="otp">
+                <!-- Append Otp -->
+            </div>
+            <input type="Number" placeholder="Enter OTP here" id="otpval">
 
-        <button id="subButton">Submit</button>
-    </div>
+            <button id="subButton">Submit</button>
+        </div>
+    </main>
 </body>
+
 </html>
 <script src="../Scripts/adminlogin.js"></script>
 <link rel="stylesheet" href="../Styles/adminLogin.css">
