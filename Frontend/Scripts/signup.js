@@ -3,7 +3,7 @@ const BaseRegister = `${BaseUrl}/users`
 const RegisterUrl = `${BaseRegister}/register`
 
 document.querySelector('#photo').addEventListener("click", () =>{
-  location.pathname="/Frontend/index.html"
+  location.pathname="/index.html"
 })
 
 
