@@ -28,14 +28,19 @@ const RightDiv = document.querySelector("#right")
 
 
 brickButton.addEventListener("click",(e)=>{
-    mainfetch();
+    RightDiv.innerHTML = ""
+    mainfetch1();
 })
 
+excavatorButton.addEventListener("click",(e)=>{
+    RightDiv.innerHTML = ""
+    mainfetch2();
+})
 
 
 // Fetching data Brick
 
-const mainfetch = async () =>{
+const mainfetch1 = async () =>{
     try {
         const res = await fetch(BrdatasUrl,{
             method: "GET",
@@ -44,15 +49,61 @@ const mainfetch = async () =>{
             }
         })
         const data = await res.json();
-        displayData(data);
+        displayData1(data);
+    } catch (error) {
+        console.log(`Error: ${error}`);
+        alert(`Error: ${error}`);
+    }
+}
+mainfetch1();
+
+
+const displayData1 = (data)=>{
+    data.forEach(el=>{
+        const div = document.createElement("div");
+        div.id = "smallDiv";
+
+        const image = document.createElement("img")
+        image.setAttribute("src", el.ImageUrl);
+
+        const title = document.createElement("h3")
+        title.innerHTML = el.Title
+
+        const price = document.createElement("h4")
+        if(el.Price==undefined){
+            
+        }else{
+            price.innerHTML = el.Price
+        }
+
+        const Button = document.createElement("button")
+        Button.innerHTML = "Add to Cart"
+
+        div.append(image,title,price,Button)
+        RightDiv.append(div);
+    })
+}
+
+
+// Excavator
+
+const mainfetch2 = async () =>{
+    try {
+        const res = await fetch(ExdatasUrl,{
+            method: "GET",
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await res.json();
+        displayData2(data);
     } catch (error) {
         console.log(`Error: ${error}`);
         alert(`Error: ${error}`);
     }
 }
 
-
-const displayData = (data)=>{
+const displayData2 = (data)=>{
     data.forEach(el=>{
         const div = document.createElement("div");
         div.id = "smallDiv";
