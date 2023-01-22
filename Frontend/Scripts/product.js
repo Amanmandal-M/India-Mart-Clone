@@ -29,6 +29,16 @@ const RightDiv = document.querySelector("#right")
 // Search Products
 const butVal = document.querySelector(".but")
 
+// Locations 
+
+document.querySelector("#sign").addEventListener("click",()=>{
+    location.pathname = '/Frontend/Views/signup.html'
+})
+
+document.querySelector("#admin").addEventListener("click",()=>{
+    location.pathname = '/Frontend/Views/adminLogin.html'
+})
+
 
 // Fetching By Clicking
 

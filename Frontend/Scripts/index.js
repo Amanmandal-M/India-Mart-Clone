@@ -10,3 +10,7 @@ document.querySelector("#admin").addEventListener('click',(e)=>{
 document.querySelector(".con").addEventListener('click',(e)=>{
     location.pathname = '/Frontend/Views/product.html';
 })
+
+document.querySelector(".producting").addEventListener('click',(e)=>{
+    location.pathname = '/Frontend/Views/product.html';
+})

@@ -394,3 +394,7 @@ button{
     font-size: 18px;
     border-radius: 13px;
 }
+
+.con:hover{
+    cursor: pointer;
+}

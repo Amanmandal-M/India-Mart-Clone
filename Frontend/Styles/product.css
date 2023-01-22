@@ -151,3 +151,7 @@
     font-weight: 800;
     background-color: lightcoral;
 }
+
+button:hover{
+    cursor: pointer;
+}
