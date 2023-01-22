@@ -3,7 +3,7 @@ const BaseRegister = `${BaseUrl}/users`
 const LoginUrl = `${BaseRegister}/login`
 
 document.querySelector('#photo').addEventListener("click", () =>{
-  location.pathname="/Frontend/index.html"
+  location.pathname="/index.html"
 })
 
 
@@ -41,7 +41,7 @@ const dataImportDB = async (obj) => {
         }else{
             const name = data.Data[0].Username;
             sessionStorage.setItem("Username", name);
-            location.pathname = "/Frontend/index.html"
+            location.pathname = "/index.html"
             alert("Login Successfully")
         }
     } else {

@@ -1,4 +1,4 @@
-const baseUrl = `http://localhost:5094`
+const baseUrl = `https://hindbazaar-mandal.up.railway.app`
 const defaultUrl = `${baseUrl}/products`               // default Endpoint
 
 // Bricks
@@ -32,18 +32,18 @@ const butVal = document.querySelector(".but")
 // Locations 
 
 document.querySelector("#sign").addEventListener("click",()=>{
-    location.pathname = '/Frontend/Views/signup.html'
+    location.pathname = '/Views/signup.html'
 })
 
 document.querySelector("#admin").addEventListener("click",()=>{
-    location.pathname = '/Frontend/Views/adminLogin.html'
+    location.pathname = '/Views/adminLogin.html'
 })
 
 
 // Fetching By Clicking
 
 document.querySelector('#photo').addEventListener("click", () =>{
-    location.pathname="/Frontend/index.html"
+    location.pathname="/index.html"
 })
 
 brickButton.addEventListener("click",(e)=>{

@@ -3,7 +3,7 @@ const BaseRegister = `${BaseUrl}/users`
 const RegisterUrl = `${BaseRegister}/register`
 
 document.querySelector('#photo').addEventListener("click", () =>{
-  location.pathname="/Frontend/index.html"
+  location.pathname="/index.html"
 })
 
 
@@ -55,7 +55,7 @@ const dataImportDB = async (obj) => {
         document.querySelector("#Password").value = "";
         document.querySelector("#ConfirmPassword").value = "";
       },0);
-      location.pathname = "/Frontend/Views/login.html";
+      location.pathname = "/Views/login.html";
     } else {
       alert("User Already Registered");
     }

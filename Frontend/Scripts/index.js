@@ -1,14 +1,14 @@
 document.querySelector("#sign").addEventListener('click',(e)=>{
-    location.pathname = '/Frontend/Views/signup.html';
+    location.pathname = '/Views/signup.html';
 })
 
 document.querySelector("#admin").addEventListener('click',(e)=>{
-    location.pathname = '/Frontend/Views/adminLogin.html';
+    location.pathname = '/Views/adminLogin.html';
 })
 
 
 document.querySelector(".con").addEventListener('click',(e)=>{
-    location.pathname = '/Frontend/Views/product.html';
+    location.pathname = '/Views/product.html';
 })
 
 document.querySelector(".producting").addEventListener('click',(e)=>{
