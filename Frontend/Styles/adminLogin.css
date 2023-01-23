@@ -65,15 +65,14 @@
     height: 470px;
 }
 
-input[type="text"],input[type="Number"],input[type="password"]{
+input[type="text"][id="user"],input[type="Number"][id="otpval"],input[type="password"][id="pass"]{
     width: 50%;
-    display: block;
-    margin: auto;
-    margin-top: 20px;
     padding: 10px 10px;
     font-size: 18px;
     border-radius: 10px;
     border: 1px solid rgb(166, 219, 20);
+    margin-top: 20px;
+    margin-left: 157px;
 }
 
 #main>button{
@@ -118,13 +117,19 @@ h1{
     color: black;
 }
 
+#main>button:hover{
+    cursor: pointer;
+    width: 30%;
+    border-radius: 20px;
+    color: #030317;
+}
 
 
 /* ********** */
 
 #CrudOperations {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    height: 330px;
+    height: 354px;
     width: 50%;
     margin: auto;
     border-radius: 30px;
@@ -143,7 +148,6 @@ h1{
 
 input{
     margin-left: 100px;
-    width: 250px;
     padding: 7px 10px;
     margin-bottom: 5px;
     font-size: 17px;
