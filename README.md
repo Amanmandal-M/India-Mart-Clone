@@ -1,3 +1,7 @@
 # haloed-ground-8588
+
 Cloning India Mart Website
-SFDSFSDS
+
+
+Project Name : HindBazaar  
+Project Logo : http://127.0.0.1:5500/Frontend/Resources/Logo.png
