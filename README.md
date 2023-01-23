@@ -4,7 +4,7 @@
 
 
 Project Name : HindBazaar  
-Project Logo : http://127.0.0.1:5500/Frontend/Resources/Logo.png
+Project Logo : https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png
 
 **************************
 <br>
@@ -57,11 +57,35 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://hindbazaar-mandal.up
 
 **Frontend Flow**
 
+Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://wonderful-tulumba-b2af93.netlify.app`
+<br>
+<br>
 *Tech Stacks*
+<ul>
+    <li>&nbsp;<b>HTML</b></li>   
+    <li>&nbsp;<b>CSS</b></li>    
+    <li>&nbsp;<b>JAVASCRIPT</b></li> 
+</ul>
+<br>
+<i>Pages of Frontend</i>
+<br>
+<ul>
+    <li>&nbsp;Homepage</li>   
+    <li>&nbsp;Product Page</li>    
+    <li>&nbsp;Cart Page</li>
+    <li>&nbsp;Admin Page</li>
+</ul>
 
-HTML  
-CSS  
-JAVASCRIPT
+<br>
+      
+    ** Logo **
+
+<br>
+
+<img width="40%" style="border-radius:1000px" src="https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png" alt="">
+
+
+<br>
 
 
 
