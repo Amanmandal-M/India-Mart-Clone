@@ -7,3 +7,10 @@ Project Name : HindBazaar
 Project Logo : http://127.0.0.1:5500/Frontend/Resources/Logo.png
 
 **Backend Flow**
+
+*Tech Stacks*
+
+Nodejs
+Expressjs
+MongoDB
+
