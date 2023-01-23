@@ -29,7 +29,7 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://hindbazaar-mandal.up
  
     **Api End Points**  
 
-<b>Default Endpoint For Products<b>  : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/products`
+<b>Default Endpoint For Products</b>  : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `/products`
 
 
     Bricks Products
@@ -43,13 +43,16 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://hindbazaar-mandal.up
 
     Excavator Products       
 
-Data of all Excavator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;`/ExcavatorData`      
-Get Data by Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Excavator`         
-Get Data by limit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Exlimit`         
-Get Data by Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Extitle`     
-Get Data of Price by Asc to Desc = `/Exasctodesc`  
-Get Data of Price by Desc to Asc = `/Exdesctoasc` 
+<b>Data of all Excavator</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;`/ExcavatorData`      
+<b>Get Data by Id</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Excavator`         
+<b>Get Data by limit</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Exlimit`         
+<b>Get Data by Title</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;&nbsp;`/Extitle`     
+<b>Get Data of Price by Asc to Desc</b> = `/Exasctodesc`  
+<b>Get Data of Price by Desc to Asc</b> = `/Exdesctoasc` 
 
+
+
+--------------------------
 
 
 **Frontend Flow**
