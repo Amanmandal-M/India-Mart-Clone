@@ -125,3 +125,10 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://wonderful-tulumba-b2
 
 <br>
 <img src="Frontend/Resources/fifth.png" alt="Error">
+
+<br>
+
+    ** Admin Page **
+
+<br>
+<img src="Frontend/Resources/sixth.png" alt="Error">
