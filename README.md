@@ -82,7 +82,7 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://wonderful-tulumba-b2
 
 <br>
 
-<img width="40%" style="border-radius:1000px" src="https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png" alt="">
+<img width="40%" style="border-radius:1000px" src="https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png" alt="Error">
 
 <br>
 
