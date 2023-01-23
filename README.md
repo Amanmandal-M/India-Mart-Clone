@@ -128,7 +128,7 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://wonderful-tulumba-b2
 
 <br>
 
-    ** Admin Page **
+    ** Admin Crud Page **
 
 <br>
 <img src="Frontend/Resources/sixth.png" alt="Error">
