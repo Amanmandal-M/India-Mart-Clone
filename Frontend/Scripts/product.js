@@ -106,7 +106,7 @@ const displayData1 = (data)=>{
         if(el.Price==undefined){
             
         }else{
-            price.innerHTML = el.Price
+            price.innerHTML = el.Price+" Lakh"
         }
 
         const Button = document.createElement("button")
