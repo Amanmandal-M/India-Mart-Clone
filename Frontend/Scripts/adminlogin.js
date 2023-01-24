@@ -1,31 +1,27 @@
-// const BaseUrl = "https://hindbazaar-mandal.up.railway.app"
-const BaseUrl = "http://localhost:5094";
+const BaseUrl = "https://hindbazaar-mandal.up.railway.app"
 const DefaultUrl = `${BaseUrl}/admin`;
 const CheckUrl = `${DefaultUrl}/check`;
 
-// Products Section 
-const defaultUrl = `${BaseUrl}/products`  
+// Products Section
+const defaultUrl = `${BaseUrl}/products`;
 
 // Bricks
-const BrdatasUrl = `${defaultUrl}/BricksData`          //GET
-const BrdataPost = `${defaultUrl}/BricksPost`          //POST
-const BrdataByIdUrl = `${defaultUrl}/Bricks`           //GET BY ID(params)
-const BrdataByLimit = `${defaultUrl}/Brlimit`          //Limit(Pagination)
-const BrdataBytitleQuery = `${defaultUrl}/Brtitle`     //Search by title
-const BrdatasortAscToDsc = `${defaultUrl}/Brasctodesc` //Sort ascending
-const BrdatasortDscToAsc = `${defaultUrl}/Brdesctoasc` //Sort descending
+const BrdatasUrl = `${defaultUrl}/BricksData`; //GET
+const BrdataPost = `${defaultUrl}/BricksPost`; //POST
+const BrdataByIdUrl = `${defaultUrl}/Bricks`; //GET BY ID(params)
+const BrdataByLimit = `${defaultUrl}/Brlimit`; //Limit(Pagination)
+const BrdataBytitleQuery = `${defaultUrl}/Brtitle`; //Search by title
+const BrdatasortAscToDsc = `${defaultUrl}/Brasctodesc`; //Sort ascending
+const BrdatasortDscToAsc = `${defaultUrl}/Brdesctoasc`; //Sort descending
 
-// Excavator 
-const ExdatasUrl = `${defaultUrl}/ExcavatorData`       //GET
-const ExdataPost = `${defaultUrl}/ExcavatorPost`       //POST
-const ExdataByIdUrl = `${defaultUrl}/Excavator`        //GET BY ID(params)
-const ExdataByLimit = `${defaultUrl}/Exlimit`          //Limit(Pagination)
-const ExdataBytitleQuery = `${defaultUrl}/Extitle`     //Search by title
-const ExdatasortAscToDsc = `${defaultUrl}/Exasctodesc` //Sort ascending
-const ExdatasortDscToAsc = `${defaultUrl}/Exdesctoasc` //Sort descending
-
-
-
+// Excavator
+const ExdatasUrl = `${defaultUrl}/ExcavatorData`; //GET
+const ExdataPost = `${defaultUrl}/ExcavatorPost`; //POST
+const ExdataByIdUrl = `${defaultUrl}/Excavator`; //GET BY ID(params)
+const ExdataByLimit = `${defaultUrl}/Exlimit`; //Limit(Pagination)
+const ExdataBytitleQuery = `${defaultUrl}/Extitle`; //Search by title
+const ExdatasortAscToDsc = `${defaultUrl}/Exasctodesc`; //Sort ascending
+const ExdatasortDscToAsc = `${defaultUrl}/Exdesctoasc`; //Sort descending
 
 const OtpButton = document.querySelector("#otps");
 
@@ -131,7 +127,12 @@ const HTML = () => {
             <!-- Append Here -->
         </div>
     `;
-  GettingValuesInput();
+  const submitButton = document.querySelector("#SubmitButton");
+
+  submitButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    GettingValuesInput();
+  });
 };
 
 const GettingValuesInput = () => {
@@ -144,25 +145,27 @@ const GettingValuesInput = () => {
     Title: Title,
     Description: Description,
     Price: Price,
-    ImageUrl: ImageUrl
+    ImageUrl: ImageUrl,
   };
-  Title != "" &&
-  Description != "" &&
-  Price != "" &&
-  ImageUrl != ""
-    ? PostProduct(obj)
-    : alert("Please Fill Fields First");
+    Title != "" &&
+    Description != "" &&
+    Price != "" &&
+    ImageUrl != ""
+  ? PostProduct(obj)
+  : alert("Please Fill Fields First");
 };
 
 const PostProduct = async (obj) => {
   try {
-    const res = await fetch(PostUrl, {
+    const res = await fetch(BrdataPost, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(obj),
     });
+    const data = await res.json();
+    console.log(data);
     if (res.ok) {
       alert("Product Added Successfully");
       setTimeout(() => {
@@ -170,7 +173,6 @@ const PostProduct = async (obj) => {
         document.querySelector("#desc").value = "";
         document.querySelector("#price").value = "";
         document.querySelector("#imageUrl").value = "";
-        document.querySelector("#quantity").value = "";
       }, 1000);
     } else {
       alert("You are not Authorized");
