@@ -39,6 +39,10 @@ document.querySelector("#admin").addEventListener("click", () => {
   location.pathname = "/Views/adminlogin.html";
 });
 
+document.querySelector(".first").addEventListener('click',(e)=>{
+  location.pathname = '/index.html';
+})
+
 // ******************************************
 
 var data;
