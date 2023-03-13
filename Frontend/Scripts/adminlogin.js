@@ -1,4 +1,4 @@
-const BaseUrl = "https://hindbazaar-mandal.up.railway.app"
+const BaseUrl = `https://hindbazaar-mandal.up.railway.app`;
 const DefaultUrl = `${BaseUrl}/admin`;
 const CheckUrl = `${DefaultUrl}/check`;
 
@@ -127,11 +127,20 @@ const HTML = () => {
             <!-- Append Here -->
         </div>
     `;
+
   const submitButton = document.querySelector("#SubmitButton");
 
   submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     GettingValuesInput();
+  });
+
+  const AllProductsButton = document.querySelector("#GetButton");
+
+  AllProductsButton.addEventListener("click", (e) => {
+    buttonsBandE();
+    funBr();
+    funEx();
   });
 };
 
@@ -147,16 +156,16 @@ const GettingValuesInput = () => {
     Price: Price,
     ImageUrl: ImageUrl,
   };
-    Title != "" &&
-    Description != "" &&
-    Price != "" &&
-    ImageUrl != ""
-  ? PostProduct(obj)
-  : alert("Please Fill Fields First");
+  Title != "" && Description != "" && Price != "" && ImageUrl != ""
+    ? PostProduct(obj)
+    : alert("Please Fill Fields First");
 };
 
+
+// ================= POST 'Method' of Bricks =================
 const PostProduct = async (obj) => {
   try {
+
     const res = await fetch(BrdataPost, {
       method: "POST",
       headers: {
@@ -164,9 +173,11 @@ const PostProduct = async (obj) => {
       },
       body: JSON.stringify(obj),
     });
+    
     const data = await res.json();
-    console.log(data);
+
     if (res.ok) {
+
       alert("Product Added Successfully");
       setTimeout(() => {
         document.querySelector("#title").value = "";
@@ -174,10 +185,108 @@ const PostProduct = async (obj) => {
         document.querySelector("#price").value = "";
         document.querySelector("#imageUrl").value = "";
       }, 1000);
+
     } else {
+
       alert("You are not Authorized");
+
     }
   } catch (error) {
     console.log(`Error in Posting Product: ${error}`);
   }
+};
+
+
+// ================= GET 'Method' of Bricks and Excavator =================
+
+const BrGetProducts = async () => {
+  try {
+    const response = await fetch(BrdatasUrl);
+    const data = await response.json();
+    console.log(data);
+    displayData1(data);
+  } catch (error) {
+    console.log("Error");
+  }
+};
+
+const ExGetProducts = async () => {
+  try {
+    const response_1 = await fetch(ExdatasUrl);
+    const data_1 = await response_1.json();
+    console.log(data_1);
+    displayData1(data_1);
+  } catch (error) {
+    console.log("Error");
+  }
+};
+
+
+// ================= Initializing Values =================
+const displayData1 = (data) => {
+  const Containers = document.querySelector("#Container");
+  Containers.innerHTML = "";
+  data.forEach((el) => {
+    const div = document.createElement("div");
+    div.id = "smallDiv";
+
+    const id = document.createElement("p");
+    id.innerHTML = el._id;
+
+    const image = document.createElement("img");
+    image.setAttribute("src", el.ImageUrl);
+
+    const title = document.createElement("h3");
+    title.innerHTML = el.Title;
+
+    const price = document.createElement("h4");
+    if (el.Price == undefined) {
+    } else {
+      price.innerHTML = el.Price + " Lakh";
+    }
+
+    const Button = document.createElement("button");
+    Button.innerHTML = "Delete";
+
+    Button.addEventListener("click", (e) =>{
+      console.log(id);
+    })
+
+    div.append(image, title, price, Button);
+    Containers.append(div);
+  });
+};
+
+
+// ================= Both Buttons Bricks and Excavator =================
+const buttonsBandE = () => {
+  const Containers = document.querySelector("#Container");
+  Containers.innerHTML = `
+    <div id="BtnBricks">Bricks</div>
+    <div id="BtnExcavator">Excavator</div>
+  `;
+};
+
+
+// ================= Appending Values of Bricks and Excavator =================
+const funBr = () => {
+  const BtBrick = document.querySelector("#BtnBricks");
+
+  const Containers = document.querySelector("#Container");
+  
+  BtBrick.addEventListener("click", (e) => {
+    Containers.innerHTML = "";
+    BrGetProducts();
+  });
+};
+
+const funEx = () => {
+  const BtExcavator = document.querySelector("#BtnExcavator");
+
+  const Containers = document.querySelector("#Container");
+
+  BtExcavator.addEventListener("click", (e) => {
+    Containers.innerHTML = "";
+    ExGetProducts();
+  });
 };
