@@ -4,7 +4,7 @@
 
 
 Project Name : HindBazaar  
-Project Logo : https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png
+Project Logo : <a href="https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png" target="_blank" >Project Logo</a>
 
 **************************
 <br>
