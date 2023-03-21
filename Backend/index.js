@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 const cors = require('cors');
 require('dotenv').config();
 
@@ -11,6 +12,7 @@ const { AdminRouter } = require('./Routes/AdminRoute');
 const { BrickRouter } = require('./Routes/BrickRouter');
 const { ExcavatorRouter } = require('./Routes/ExcavatorRouter');
 const { UserRouter } = require('./Routes/UserRouter');
+const { CartRouter } = require('./Routes/CartRoute');
 
 
 
@@ -19,6 +21,7 @@ const { UserRouter } = require('./Routes/UserRouter');
 
 app.use(express.json());
 app.use(cors());
+
 app.get('/',(req,res)=>{
     res.send("Welcome in My Project Api")
 })
@@ -26,6 +29,7 @@ app.get('/',(req,res)=>{
 app.use("/products" ,BrickRouter)
 app.use("/products" ,ExcavatorRouter)
 app.use("/users",UserRouter)
+app.use(CartRouter);
 app.use(validator);
 app.use("/admin",AdminRouter)
 

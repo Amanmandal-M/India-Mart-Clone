@@ -1,6 +1,6 @@
 const express = require('express');
 const AdminRouter = express.Router();
-const {UpdateBrick,DeleteBrick,UpdateExcavator,DeleteExcavator,UserData} = require('../Controllers/AdminControl')
+const {UpdateBrick,DeleteBrick,UpdateExcavator,DeleteExcavator,UserData} = require('../Controllers/AdminController')
 require('dotenv').config();
 
 AdminRouter.post('/check',(req,res)=>{
