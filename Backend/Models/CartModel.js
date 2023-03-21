@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const CartSchema = mongoose.Schema({
-    title:String,
-    price:String,
-    image:String
+    Title:String,
+    Price:Number,
+    ImageUrl:String,
+    Description:Object
 })
 
 const CartModel = mongoose.model('Cart',CartSchema);

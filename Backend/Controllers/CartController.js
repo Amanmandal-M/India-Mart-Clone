@@ -10,7 +10,8 @@ const PostCart = async (req,res)=>{
     } catch (error) {
         console.log(`Error in Cart: ${error}`);
         res.status(404).send({
-            "Message": error
+            "Message": "Already in Cart , Go in Cart Section",
+            "ErrorMessage":error
         });
     }
 }
