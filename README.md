@@ -85,7 +85,7 @@ Deployed Link :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`https://wonderful-tulumba-b2
 
 <br>
 
-<img width="40%" style="border-radius:100px" src="https://wonderful-tulumba-b2af93.netlify.app/Resources/Logo.png" alt="Error">
+<img width="40%" style="border-radius:100px" src="https://hind-bazaar.netlify.app/Resources/Logo.png" alt="Error">
 
 <br>
 
