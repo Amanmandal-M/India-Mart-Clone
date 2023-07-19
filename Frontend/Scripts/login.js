@@ -1,4 +1,4 @@
-const BaseUrl = "https://hindbazaar-mandal.up.railway.app";
+const BaseUrl = "https://hind-mart-backend.onrender.com";
 const BaseRegister = `${BaseUrl}/users`
 const LoginUrl = `${BaseRegister}/login`
 

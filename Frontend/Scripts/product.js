@@ -1,4 +1,4 @@
-const baseUrl = `https://hindbazaar-mandal.up.railway.app`
+const baseUrl = `https://hind-mart-backend.onrender.com`
 const defaultUrl = `${baseUrl}/products`               // default Endpoint
 
 // Bricks

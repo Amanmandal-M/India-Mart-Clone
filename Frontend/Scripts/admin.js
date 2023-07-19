@@ -1,4 +1,4 @@
-const BaseUrl = "https://hindbazaar-mandal.up.railway.app";
+const BaseUrl = "https://hind-mart-backend.onrender.com";
 const DefaultUrl = `${BaseUrl}/products`;
 const GetAllProductsUrl = `${DefaultUrl}/`;                // GET
 const PostUrl = `${DefaultUrl}/create`;                   // POST
